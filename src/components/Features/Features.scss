@@ -1,0 +1,39 @@
+@use "../../index.scss" as *;
+
+.features {
+  margin-top: 2rem;
+  padding-inline: 1rem;
+  background-color: var(--clr-accent2-300);
+
+  h2,
+  h4 {
+    color: var(--white);
+  }
+
+  h2,
+  p {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .feature-img {
+    display: none;
+  }
+
+  .features-cards {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  @include md-screen {
+    margin-top: 6rem;
+    .features-cards {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

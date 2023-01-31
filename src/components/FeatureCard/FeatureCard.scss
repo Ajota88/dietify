@@ -1,0 +1,13 @@
+@use "../../index.scss" as *;
+
+.feature-card {
+  width: 25rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--clr-accent2-500);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-3);
+
+  @include md-screen {
+    width: 18rem;
+  }
+}
