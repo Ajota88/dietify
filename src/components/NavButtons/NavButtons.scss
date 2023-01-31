@@ -9,4 +9,13 @@
   .menu-btn {
     font-size: 2rem;
   }
+
+  @include md-screen {
+    .login-btn {
+      display: block;
+    }
+    .menu-btn {
+      display: none;
+    }
+  }
 }

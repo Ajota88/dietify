@@ -1,0 +1,60 @@
+@use "../../index.scss" as *;
+
+.hero {
+  margin-top: 3rem;
+  padding-inline: 1rem;
+
+  background-image: linear-gradient(
+    to right,
+    var(--clr-accent2-500),
+    var(--clr-accent2-300)
+  );
+
+  .info {
+    margin-inline: auto;
+    max-width: 25rem;
+    text-align: center;
+  }
+
+  .hero-img {
+    display: none;
+  }
+
+  h1,
+  p {
+    color: var(--white);
+  }
+  span {
+    color: var(--clr-primary-300);
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+
+  @include lg-screen {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    gap: 5rem;
+
+    .info {
+      margin-left: 5rem;
+      max-width: 40rem;
+      text-align: left;
+    }
+
+    .hero-img {
+      display: block;
+      position: absolute;
+      right: 20%;
+      top: 5%;
+
+      img {
+        max-height: 22rem;
+        border-radius: var(--big-radius);
+        box-shadow: var(--shadow-4);
+      }
+    }
+  }
+}

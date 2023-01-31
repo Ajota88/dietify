@@ -6,6 +6,11 @@
   --clr-accent-400: #34d399;
   --clr-accent-300: #6ee7b7;
   --clr-accent-200: #a7f3d0;
+  --clr-accent-100: #d1fae5;
+
+  --clr-accent2-500: #bf5db7;
+  --clr-accent2-400: #d976d0;
+  --clr-accent2-300: #f38eea;
 
   --clr-primary-500: #eab308;
   --clr-primary-400: #facc15;
@@ -26,9 +31,10 @@
   --bodyFont: "Nunito", Sans-Serif;
 
   /* general */
-  --backgroundColor: var(--clr-neutral-50);
+  --backgroundColor: var(--clr-accent-200);
   --textColor: var(--clr-primary-400);
   --radius: 0.25rem;
+  --big-radius: 1rem;
   --letterSpacing: 1px;
   --transition: 0.3s ease-in-out all;
   --spacing: 0.1rem;
@@ -64,7 +70,11 @@ html {
 }
 
 body {
-  background: var(--backgroundColor);
+  background-image: radial-gradient(
+    circle,
+    var(--clr-accent-100) 0%,
+    var(--clr-accent-200) 90%
+  );
   min-height: 100vh;
   font-family: var(--bodyFont);
   font-weight: 400;
@@ -146,7 +156,7 @@ hr {
 .btn {
   cursor: pointer;
   color: var(--clr-accent-500);
-  background: var(--clr-primary-400);
+  background: var(--clr-primary-300);
   border: transparent;
   border-radius: var(--radius);
   letter-spacing: var(--letterSpacing);
@@ -158,13 +168,13 @@ hr {
 
   &:hover,
   :focus-visible {
-    background: var(--clr-primary-300);
+    background: var(--clr-primary-200);
     box-shadow: var(--shadow-3);
   }
 }
 
 .section {
-  padding: 5rem 0;
+  padding-block: 5rem;
 }
 .section-center {
   width: 90vw;
@@ -193,6 +203,12 @@ hr {
 
 @mixin md-screen {
   @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin lg-screen {
+  @media (min-width: 992px) {
     @content;
   }
 }

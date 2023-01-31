@@ -1,6 +1,14 @@
+import { Hero, Features, Testimonials, Contact } from "../../components";
 import "./Home.scss";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <main>
+      <Hero />
+      <Features />
+      <Testimonials />
+      <Contact />
+    </main>
+  );
 };
 export default Home;
