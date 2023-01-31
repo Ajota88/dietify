@@ -1,0 +1,46 @@
+@use "../../index.scss" as *;
+
+.searchbar {
+  input {
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+    background-color: transparent;
+    border: 1px solid var(--clr-neutral-200);
+    padding-block: 0.25rem;
+    width: 10rem;
+    transition: var(--transition);
+    color: var(--white);
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: var(--white);
+    }
+  }
+
+  button {
+    color: white;
+    background-color: var(--clr-primary-400);
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    border: none;
+    padding-block: 0.3rem;
+    cursor: pointer;
+    transition: var(--transition);
+
+    &:hover {
+      background-color: var(--clr-primary-300);
+    }
+  }
+
+  @include md-screen {
+    input {
+      width: 8rem;
+      transition: var(--transition);
+
+      &:focus {
+        width: 15rem;
+      }
+    }
+  }
+}

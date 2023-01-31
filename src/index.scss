@@ -27,7 +27,7 @@
 
   /* general */
   --backgroundColor: var(--clr-neutral-50);
-  --textColor: var(--clr-primary-500);
+  --textColor: var(--clr-primary-400);
   --radius: 0.25rem;
   --letterSpacing: 1px;
   --transition: 0.3s ease-in-out all;
@@ -158,7 +158,7 @@ hr {
 
   &:hover,
   :focus-visible {
-    background: var(--clr-primary-200);
+    background: var(--clr-primary-300);
     box-shadow: var(--shadow-3);
   }
 }

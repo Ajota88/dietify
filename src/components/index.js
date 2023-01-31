@@ -5,5 +5,15 @@ import Hero from "./Hero/Hero";
 import Navbar from "./Navbar/Navbar";
 import Searchbar from "./Searchbar/Searchbar";
 import Testimonials from "./Testimonials/Testimonials";
+import NavButtons from "./NavButtons/NavButtons";
 
-export { Contact, Features, Footer, Hero, Navbar, Searchbar, Testimonials };
+export {
+  Contact,
+  Features,
+  Footer,
+  Hero,
+  Navbar,
+  Searchbar,
+  Testimonials,
+  NavButtons,
+};

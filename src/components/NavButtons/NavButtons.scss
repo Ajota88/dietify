@@ -1,0 +1,12 @@
+@use "../../index.scss" as *;
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  .login-btn {
+    display: none;
+  }
+  .menu-btn {
+    font-size: 2rem;
+  }
+}

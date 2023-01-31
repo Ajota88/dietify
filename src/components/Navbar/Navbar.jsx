@@ -1,3 +1,4 @@
+import { Searchbar, NavButtons } from "../index";
 import "./Navbar.scss";
 import Logo from "../../assets/svg/logo-no-background.svg";
 
@@ -8,6 +9,8 @@ const Navbar = () => {
         <div className="logo">
           <img src={Logo} alt="dietify" />
         </div>
+        <Searchbar />
+        <NavButtons />
       </div>
     </nav>
   );
