@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--clr-accent-500);
+  background-color: var(--clr-accent2-500);
   margin-top: 4rem;
   border-top-left-radius: var(--big-radius);
   border-top-right-radius: var(--big-radius);
@@ -21,6 +21,7 @@
     gap: 1rem;
     font-size: 2rem;
     font-weight: 700;
+    color: var(--clr-accent-500);
   }
 
   p {

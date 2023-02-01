@@ -2,6 +2,7 @@
 
 .searchbar {
   input {
+    display: none;
     border-top-left-radius: var(--radius);
     border-bottom-left-radius: var(--radius);
     background-color: transparent;
@@ -15,6 +16,13 @@
     }
     &::placeholder {
       color: var(--white);
+    }
+
+    &[data-type="mobile"] {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: var(--clr-accent2-500);
+      width: 90%;
     }
   }
 
@@ -35,8 +43,13 @@
 
   @include md-screen {
     input {
-      width: 8rem;
+      display: inline-block;
+      width: 20rem;
       transition: var(--transition);
+
+      &[data-type="mobile"] {
+        display: none;
+      }
 
       &:focus {
         width: 15rem;

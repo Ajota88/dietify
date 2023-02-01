@@ -1,7 +1,7 @@
 @use "../../index.scss" as *;
 
 .contact {
-  margin-top: 2rem;
+  margin-top: 5rem;
   background-image: linear-gradient(
     to right,
     var(--clr-accent2-500),
@@ -28,7 +28,7 @@
   .submit-btn {
     font-size: 1rem;
     padding: 0.5rem;
-    border: 2px solid var(--clr-primary-500);
+    border: 2px solid var(--clr-accent-500);
   }
 
   .form-input {

@@ -8,9 +8,9 @@
   --clr-accent-200: #a7f3d0;
   --clr-accent-100: #d1fae5;
 
-  --clr-accent2-500: #bf5db7;
-  --clr-accent2-400: #d976d0;
-  --clr-accent2-300: #f38eea;
+  --clr-accent2-500: #005473;
+  --clr-accent2-400: #006a8a;
+  --clr-accent2-300: #0081a2;
 
   --clr-primary-500: #eab308;
   --clr-primary-400: #facc15;
@@ -153,8 +153,8 @@ hr {
 
 .btn {
   cursor: pointer;
-  color: var(--clr-accent-500);
-  background: var(--clr-primary-300);
+  color: var(--clr-primary-300);
+  background: var(--clr-accent-500);
   border: transparent;
   border-radius: var(--radius);
   letter-spacing: var(--letterSpacing);
@@ -166,8 +166,10 @@ hr {
 
   &:hover,
   :focus-visible {
-    background: var(--clr-primary-200);
+    background: var(--clr-accent-400);
     box-shadow: var(--shadow-3);
+    transform: translateY(-0.25rem);
+    color: var(--clr-primary-100);
   }
 }
 
