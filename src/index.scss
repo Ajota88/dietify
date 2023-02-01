@@ -31,7 +31,7 @@
   --bodyFont: "Nunito", Sans-Serif;
 
   /* general */
-  --backgroundColor: var(--clr-accent-200);
+  --backgroundColor: var(--clr-accent-100);
   --textColor: var(--clr-primary-400);
   --radius: 0.25rem;
   --big-radius: 1.5rem;
@@ -70,11 +70,7 @@ html {
 }
 
 body {
-  background-image: radial-gradient(
-    circle,
-    var(--clr-accent-100) 0%,
-    var(--clr-accent-200) 90%
-  );
+  background-color: var(--backgroundColor);
   min-height: 100vh;
   font-family: var(--bodyFont);
   font-weight: 400;

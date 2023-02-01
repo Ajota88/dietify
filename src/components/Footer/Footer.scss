@@ -1,0 +1,31 @@
+.footer {
+  background-color: var(--clr-accent-500);
+  margin-top: 4rem;
+  border-top-left-radius: var(--big-radius);
+  border-top-right-radius: var(--big-radius);
+  img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+  }
+
+  .container {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  p {
+    text-align: center;
+    font-weight: 700;
+    margin-inline: auto;
+  }
+}
