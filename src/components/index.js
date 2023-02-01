@@ -9,6 +9,7 @@ import NavButtons from "./NavButtons/NavButtons";
 import FeatureCard from "./FeatureCard/FeatureCard";
 import TestimonialCard from "./TestimonialCard/TestimonialCard";
 import NutririonCard from "./NutritionCard/NutririonCard";
+import Chart from "./Chart/Chart";
 
 export {
   Contact,
@@ -22,4 +23,5 @@ export {
   FeatureCard,
   TestimonialCard,
   NutririonCard,
+  Chart,
 };

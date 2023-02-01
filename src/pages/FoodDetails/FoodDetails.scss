@@ -1,0 +1,9 @@
+@use "../../index.scss" as *;
+
+.food-detail {
+  @include lg-screen {
+    .nutrition-info {
+      display: flex;
+    }
+  }
+}

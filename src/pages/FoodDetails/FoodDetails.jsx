@@ -1,10 +1,13 @@
-import { NutririonCard } from "../../components";
+import { NutririonCard, Chart } from "../../components";
 import "./FoodDetails.scss";
 
 const FoodDetails = () => {
   return (
-    <div>
-      <NutririonCard />
+    <div className="food-detail">
+      <div className="nutrition-info">
+        <NutririonCard />
+        <Chart />
+      </div>
     </div>
   );
 };
