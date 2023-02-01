@@ -31,3 +31,30 @@ export const features = [
     icon: faStar,
   },
 ];
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "Saul Manning",
+    desc: "id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh",
+    job: "Free lancer",
+  },
+  {
+    id: 2,
+    name: "Erica Cross",
+    desc: "a cras semper auctor neque vitae tempus quam pellentesque nec nam aliquam sem et tortor consequat id porta nibh venenatis",
+    job: "Nutritionist",
+  },
+  {
+    id: 3,
+    name: "Aisha Mullins",
+    desc: "metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper eget duis at tellus",
+    job: "Therapist",
+  },
+  {
+    id: 4,
+    name: "Bradley Joyce",
+    desc: "at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet nulla facilisi morbi tempus iaculis urna id volutpat",
+    job: "Contractor",
+  },
+];

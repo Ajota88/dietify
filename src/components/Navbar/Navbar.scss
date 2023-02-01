@@ -5,9 +5,11 @@
     align-items: center;
     justify-content: space-between;
     background-color: var(--clr-accent2-500);
+    border-radius: var(--big-radius);
+
     img {
-      height: 7rem;
-      width: 7rem;
+      height: 5rem;
+      width: 5rem;
     }
   }
 }

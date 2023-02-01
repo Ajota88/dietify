@@ -1,0 +1,81 @@
+@use "../../index.scss" as *;
+
+.testimonials {
+  margin-top: 3rem;
+  padding-inline: 1rem;
+  border-radius: var(--big-radius);
+
+  background-image: linear-gradient(
+    to right,
+    var(--clr-accent2-500),
+    var(--clr-accent2-300)
+  );
+
+  img {
+    display: none;
+  }
+
+  h2 {
+    color: white;
+    font-weight: 700;
+  }
+
+  .info {
+    margin-top: 2rem;
+  }
+
+  .swiper-slide {
+    .card {
+      width: 16rem;
+      margin-inline: auto;
+      padding: 0.5rem 1rem;
+      background-color: var(--clr-accent2-500);
+      box-shadow: var(--shadow-4);
+      border-radius: var(--radius);
+
+      h5,
+      span {
+        text-align: end;
+        display: block;
+        font-weight: 700;
+      }
+
+      svg {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  @include md-screen {
+    .card {
+      width: 20rem;
+    }
+  }
+
+  @include lg-screen {
+    h2 {
+      text-align: center;
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .swiper {
+      display: block;
+      width: 30rem;
+      height: min-content;
+    }
+
+    img {
+      display: block;
+      height: 25rem;
+      width: auto;
+      margin-right: 5rem;
+      border-radius: var(--big-radius);
+      box-shadow: var(--shadow-4);
+    }
+  }
+}

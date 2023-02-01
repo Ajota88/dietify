@@ -7,6 +7,7 @@ import Searchbar from "./Searchbar/Searchbar";
 import Testimonials from "./Testimonials/Testimonials";
 import NavButtons from "./NavButtons/NavButtons";
 import FeatureCard from "./FeatureCard/FeatureCard";
+import TestimonialCard from "./TestimonialCard/TestimonialCard";
 
 export {
   Contact,
@@ -18,4 +19,5 @@ export {
   Testimonials,
   NavButtons,
   FeatureCard,
+  TestimonialCard,
 };

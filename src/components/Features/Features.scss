@@ -3,17 +3,23 @@
 .features {
   margin-top: 2rem;
   padding-inline: 1rem;
-  background-color: var(--clr-accent2-300);
+  background-color: var(--clr-accent2-400);
+  border-radius: var(--big-radius);
 
   h2,
   h4 {
     color: var(--white);
+    font-weight: 700;
   }
 
   h2,
   p {
     text-align: center;
     margin-inline: auto;
+  }
+
+  p {
+    color: var(--clr-primary-400);
   }
 
   .feature-img {
@@ -31,9 +37,38 @@
 
   @include md-screen {
     margin-top: 6rem;
+
     .features-cards {
       flex-direction: row;
       justify-content: space-between;
+    }
+  }
+
+  @include lg-screen {
+    display: flex;
+    position: relative;
+
+    .feature-img {
+      position: absolute;
+      left: 10%;
+      top: 20%;
+      display: block;
+      img {
+        height: 30rem;
+        width: auto;
+        border-radius: var(--big-radius);
+        box-shadow: var(--shadow-4);
+      }
+    }
+
+    .info {
+      width: 40rem;
+      margin-left: 50%;
+    }
+
+    .features-cards {
+      justify-content: center;
+      gap: 2rem;
     }
   }
 }

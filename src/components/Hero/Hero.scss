@@ -3,6 +3,7 @@
 .hero {
   margin-top: 3rem;
   padding-inline: 1rem;
+  border-radius: var(--big-radius);
 
   background-image: linear-gradient(
     to right,
@@ -24,6 +25,11 @@
   p {
     color: var(--white);
   }
+
+  h1 {
+    font-weight: 700;
+  }
+
   span {
     color: var(--clr-primary-300);
   }
