@@ -10,6 +10,7 @@ import FeatureCard from "./FeatureCard/FeatureCard";
 import TestimonialCard from "./TestimonialCard/TestimonialCard";
 import NutririonCard from "./NutritionCard/NutririonCard";
 import Chart from "./Chart/Chart";
+import ExerciseCard from "./ExerciseCard/ExerciseCard";
 
 export {
   Contact,
@@ -24,4 +25,5 @@ export {
   TestimonialCard,
   NutririonCard,
   Chart,
+  ExerciseCard,
 };

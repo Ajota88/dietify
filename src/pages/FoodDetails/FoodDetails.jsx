@@ -1,4 +1,4 @@
-import { NutririonCard, Chart } from "../../components";
+import { NutririonCard, Chart, ExerciseCard } from "../../components";
 import "./FoodDetails.scss";
 
 const FoodDetails = () => {
@@ -8,6 +8,7 @@ const FoodDetails = () => {
         <NutririonCard />
         <Chart />
       </div>
+      <ExerciseCard />
     </div>
   );
 };

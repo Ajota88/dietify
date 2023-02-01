@@ -4,6 +4,7 @@
   @include lg-screen {
     .nutrition-info {
       display: flex;
+      align-items: center;
     }
   }
 }

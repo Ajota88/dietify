@@ -1,4 +1,11 @@
+@use "../../index.scss" as *;
+
 .chart {
-  width: 30rem;
-  height: 30rem;
+  width: 18rem;
+  height: 18rem;
+  margin-inline: auto;
+  @include lg-screen {
+    width: 30rem;
+    height: 30rem;
+  }
 }
