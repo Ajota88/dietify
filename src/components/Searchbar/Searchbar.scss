@@ -1,6 +1,7 @@
 @use "../../index.scss" as *;
 
 .searchbar {
+  position: relative;
   input {
     display: none;
     border-top-left-radius: var(--radius);
@@ -41,6 +42,14 @@
     }
   }
 
+  .search-results {
+    background-color: var(--white);
+    color: var(--clr-neutral-400);
+    height: 20rem;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
   @include md-screen {
     input {
       display: inline-block;
@@ -50,10 +59,13 @@
       &[data-type="mobile"] {
         display: none;
       }
+    }
 
-      &:focus {
-        width: 15rem;
-      }
+    .search-results {
+      position: absolute;
+      top: 2rem;
+      left: 0;
+      z-index: 5;
     }
   }
 }

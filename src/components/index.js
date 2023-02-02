@@ -11,6 +11,7 @@ import TestimonialCard from "./TestimonialCard/TestimonialCard";
 import NutririonCard from "./NutritionCard/NutririonCard";
 import Chart from "./Chart/Chart";
 import ExerciseCard from "./ExerciseCard/ExerciseCard";
+import SearchItem from "./SearchItem/SearchItem";
 
 export {
   Contact,
@@ -26,4 +27,5 @@ export {
   NutririonCard,
   Chart,
   ExerciseCard,
+  SearchItem,
 };
