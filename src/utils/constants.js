@@ -58,3 +58,18 @@ export const testimonials = [
     job: "Contractor",
   },
 ];
+
+//DAILY VALUES NUTRIENTS INTAKE WEIGHT
+export const dailyValues = {
+  fat: 65,
+  saturetedFat: 20,
+  cholesterol: 300,
+  sodium: 2400,
+  carbohydrate: 300,
+  fibre: 25,
+  vitaminD: 10,
+  calcium: 1100,
+  iron: 20,
+  potassium: 3400,
+  addedSugars: 50,
+};

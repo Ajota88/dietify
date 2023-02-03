@@ -14,9 +14,16 @@ export const apiSlice = createApi({
 
   endpoints: (builder) => ({
     getFoodList: builder.query({
-      query: (foodName) => `search/instant?query=${foodName}`,
+      query: (foodName) => `/search/instant?query=${foodName}`,
+    }),
+    getFoodNutrients: builder.mutation({
+      query: (food) => ({
+        url: "/natural/nutrients",
+        method: "POST",
+        body: food,
+      }),
     }),
   }),
 });
 
-export const { useGetFoodListQuery } = apiSlice;
+export const { useGetFoodListQuery, useGetFoodNutrientsMutation } = apiSlice;
