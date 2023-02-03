@@ -47,7 +47,14 @@ const Searchbar = ({ mobile, isVisible }) => {
       {data?.common?.length && !isError && showInfo1 && (
         <div className="search-results" ref={ref}>
           {data?.common.map((item, index) => {
-            return <SearchItem key={item["tag_id"] + index} {...item} />;
+            return (
+              <SearchItem
+                key={item["tag_id"] + index}
+                {...item}
+                close={() => setShowInfo1(false)}
+                clearSearchInput={() => setSearchInput("")}
+              />
+            );
           })}
         </div>
       )}
