@@ -58,7 +58,7 @@ const NutririonCard = ({ food }) => {
           <span class="bold right">{saturetedFat.dailyValue}%</span>
         </p>
         <div class="divider"></div>
-        {transFat && (
+        {!!transFat && (
           <p class="indent no-divider">
             <span>
               <i>Trans</i> Fat {transFat}g

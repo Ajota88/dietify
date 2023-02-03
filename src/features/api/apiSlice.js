@@ -23,7 +23,18 @@ export const apiSlice = createApi({
         body: food,
       }),
     }),
+    getBurnCalories: builder.mutation({
+      query: (calories) => ({
+        url: "/natural/exercise",
+        method: "POST",
+        body: calories,
+      }),
+    }),
   }),
 });
 
-export const { useGetFoodListQuery, useGetFoodNutrientsMutation } = apiSlice;
+export const {
+  useGetFoodListQuery,
+  useGetFoodNutrientsMutation,
+  useGetBurnCaloriesMutation,
+} = apiSlice;
