@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretUp, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import "./NutritionCard.scss";
 import { useNutrients } from "../../hooks/useNutrients";
 
@@ -24,15 +27,52 @@ const NutririonCard = ({ food }) => {
   } = useNutrients(food);
   console.log(name);
 
+  const [inputQty, setInputQty] = useState(servingQty);
+
+  const increaseQty = () => {
+    setInputQty((prev) => prev + 1);
+  };
+
+  const decreaseQty = () => {
+    if (inputQty > 1) {
+      setInputQty((prev) => prev - 1);
+    }
+  };
+
+  const changeQty = (e) => {
+    if (e.target.value <= 0) {
+      setInputQty(1);
+    } else {
+      setInputQty(Math.round(e.target.value));
+    }
+  };
+
+  const multiplier = (inputQty / servingQty).toFixed(2);
+
   return (
     <div class="nutrition-card">
       <header>
         <h3 class="bold">Nutrition Facts</h3>
         <div class="divider"></div>
-        <p>{name}</p>
+        <p className="food-name">{name}</p>
         <p class="bold">
-          Serving Size:{" "}
-          <span>{`${servingQty} ${servingUnit} (${weight}g)`}</span>
+          Serving Size:
+          <div className="serving">
+            <div className="qty-btns">
+              <button>
+                <FontAwesomeIcon icon={faCaretUp} onClick={increaseQty} />
+              </button>
+              <button>
+                <FontAwesomeIcon icon={faCaretDown} onClick={decreaseQty} />
+              </button>
+            </div>
+            <input
+              className="qty-input"
+              value={inputQty}
+              onChange={changeQty}
+            />
+            {`${servingUnit} (${weight * multiplier}g)`}
+          </div>
         </p>
       </header>
       <div class="divider large"></div>
@@ -41,7 +81,7 @@ const NutririonCard = ({ food }) => {
           <h2 class="bold small-text">Amount per serving</h2>
           <p>Calories</p>
         </div>
-        <span class="right">{calories}</span>
+        <span class="right">{calories * multiplier}</span>
       </div>
       <div class="divider medium"></div>
       <div class="daily-value small-text">
@@ -49,67 +89,76 @@ const NutririonCard = ({ food }) => {
         <div class="divider"></div>
         <p>
           <span>
-            <span class="bold">Total Fat</span> {totalFat.weight}g
+            <span class="bold">Total Fat</span> {totalFat.weight * multiplier}g
           </span>
-          <span class="bold right">{totalFat.dailyValue}%</span>
+          <span class="bold right">{totalFat.dailyValue * multiplier}%</span>
         </p>
         <p class="indent no-divider">
-          Saturated Fat {saturetedFat.weight}g
+          Saturated Fat {saturetedFat.weight * multiplier}g
           <span class="bold right">{saturetedFat.dailyValue}%</span>
         </p>
         <div class="divider"></div>
         {!!transFat && (
           <p class="indent no-divider">
             <span>
-              <i>Trans</i> Fat {transFat}g
+              <i>Trans</i> Fat {transFat * multiplier}g
             </span>
           </p>
         )}
         <div class="divider"></div>
         <p>
           <span>
-            <span class="bold">Cholesterol</span> {cholesterol.weight}mg
+            <span class="bold">Cholesterol</span>{" "}
+            {cholesterol.weight * multiplier}mg
           </span>
-          <span class="right bold">{cholesterol.dailyValue}%</span>
+          <span class="right bold">{cholesterol.dailyValue * multiplier}%</span>
         </p>
         <p>
           <span>
-            <span class="bold">Sodium</span> {sodium.weight}mg
+            <span class="bold">Sodium</span> {sodium.weight * multiplier}mg
           </span>
-          <span class="right bold">{sodium.dailyValue}%</span>
+          <span class="right bold">{sodium.dailyValue * multiplier}%</span>
         </p>
         <p>
           <span>
             <span class="bold">Total Carbohydrate</span>{" "}
-            {totalCarbohydrate.weight}g
+            {totalCarbohydrate.weight * multiplier}g
           </span>
-          <span class="right bold">{totalCarbohydrate.dailyValue}%</span>
+          <span class="right bold">
+            {totalCarbohydrate.dailyValue * multiplier}%
+          </span>
         </p>
         <p class="indent no-divider">
-          Dietary Fiber {fibre.weight}g
-          <span class="bold right">{fibre.dailyValue}%</span>
+          Dietary Fiber {fibre.weight * multiplier}g
+          <span class="bold right">{fibre.dailyValue * multiplier}%</span>
         </p>
         <div class="divider"></div>
         {totalSugar && (
-          <p class="indent no-divider">Total Sugars{totalSugar}g</p>
+          <p class="indent no-divider">
+            Total Sugars{totalSugar * multiplier}g
+          </p>
         )}
 
         <div class="divider"></div>
         <p class="no-divider">
-          <span class="bold">Protein {protein}g</span>
+          <span class="bold">Protein {protein * multiplier}g</span>
         </p>
         <div class="divider large"></div>
         <p>
-          Vitamin D {vitaminD.weight}mcg <span>{vitaminD.dailyValue}%</span>
+          Vitamin D {vitaminD.weight * multiplier}mcg
+          <span>{vitaminD.dailyValue * multiplier}%</span>
         </p>
         <p>
-          Calcium {calcium.weight}mg <span>{calcium.dailyValue}%</span>
+          Calcium {calcium.weight * multiplier}mg
+          <span>{calcium.dailyValue * multiplier}%</span>
         </p>
         <p>
-          Iron {iron.weight}mg <span>{iron.dailyValue}%</span>
+          Iron {iron.weight * multiplier}mg
+          <span>{iron.dailyValue * multiplier}%</span>
         </p>
         <p class="no-divider">
-          Potassium {potassium.weight}mg <span>{potassium.dailyValue}%</span>
+          Potassium {potassium.weight * multiplier}mg
+          <span>{potassium.dailyValue * multiplier}%</span>
         </p>
       </div>
       <div class="divider medium"></div>

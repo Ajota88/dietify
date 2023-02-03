@@ -14,7 +14,9 @@ const ExerciseCard = ({ exercises, cal }) => {
 
   return (
     <div className="exercise-card">
-      <h2>How long would it take to burn off {cal} Cal?</h2>
+      <h3>
+        How long would it take to burn off <span>{cal}</span> Cal?
+      </h3>
       <div className="exercise">
         <FontAwesomeIcon icon={faWalking} />
         <p>
