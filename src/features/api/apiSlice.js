@@ -5,8 +5,8 @@ export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "https://trackapi.nutritionix.com/v2",
     prepareHeaders: (headers, { getState }) => {
-      headers.set("x-app-id", "f0741bbc");
-      headers.set("x-app-key", "bc10cf98ae98fd383b699d36f5ab7da8");
+      headers.set("x-app-id", import.meta.env.VITE_API_ID);
+      headers.set("x-app-key", import.meta.env.VITE_API_KEY);
 
       return headers;
     },
