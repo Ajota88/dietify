@@ -11,7 +11,7 @@ import { TestimonialCard } from "../index";
 
 const Testimonials = () => {
   return (
-    <section className="testimonials | section">
+    <section id="reviews" className="testimonials | section">
       <h2>Our successfull stories</h2>
       <article className="info">
         <Swiper navigation={true} modules={[Navigation]} classname="swiper">

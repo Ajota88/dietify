@@ -2,7 +2,7 @@ import "./Contact.scss";
 
 const Contact = () => {
   return (
-    <section className="contact | section">
+    <section id="contact" className="contact | section">
       <h2>Your trusted source of food and nutrition information</h2>
       <p>
         Subscribe to our newsletter and get information on nutrition and health,

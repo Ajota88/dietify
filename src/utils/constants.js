@@ -5,6 +5,25 @@ import {
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
 
+export const navLinks = [
+  {
+    id: 1,
+    title: "Features",
+    url: "#features",
+  },
+
+  {
+    id: 2,
+    title: "Reviews",
+    url: "#reviews",
+  },
+  {
+    id: 3,
+    title: "Contact Us",
+    url: "#contact",
+  },
+];
+
 export const features = [
   {
     id: 1,

@@ -5,7 +5,7 @@ import { features } from "../../utils/constants";
 
 const Features = () => {
   return (
-    <section className="features  | section">
+    <section id="features" className="features  | section">
       <div className="feature-img">
         <img src={FeatureImg} alt="Salad" />
       </div>

@@ -3,13 +3,17 @@ import { faBars, faUser } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import "./NavButtons.scss";
 
-const NavButtons = () => {
+const NavButtons = ({ handleOpen, handleClose, mobile }) => {
   return (
-    <div className="nav-buttons">
+    <div className="nav-buttons" data-type={mobile}>
       <button className="login-btn btn">
         <FontAwesomeIcon icon={faUser} /> <span>Login</span>
       </button>
-      <FontAwesomeIcon className="menu-btn" icon={faBars} />
+      <FontAwesomeIcon
+        className="menu-btn"
+        icon={faBars}
+        onClick={handleOpen}
+      />
     </div>
   );
 };
